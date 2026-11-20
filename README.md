@@ -5,7 +5,9 @@ Data Analytics & Intelligence Artificielle
 Palette : rose poudré `#F6CBD4`, bordeaux `#4A0F24` et vert `#2DC92A`.
 Photo de profil intégrée (`assets/portrait.jpg`).
 
-Formation : 5 formations (2 baccalauréats, DUT, licence et Master en cours), plus l'année de sciences mathématiques et informatique (2020-2021) dans la timeline.
+Formation : 6 formations (2 baccalauréats, DUT, licence, Master en cours et année de sciences mathématiques et informatique).
+
+Démos en direct : Price Monitoring (Netlify) et Face Recognition (Streamlit), liées depuis les cartes de projets.
 
 ## Présentation du CV
 
