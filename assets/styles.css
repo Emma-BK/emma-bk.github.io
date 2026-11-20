@@ -1039,6 +1039,23 @@ ul { margin: 0; padding: 0; list-style: none; }
 .project-body strong { color: var(--text); font-weight: 600; }
 .project-body .tag-list { margin-top: auto; padding-top: 18px; }
 
+a.project { cursor: pointer; }
+.project-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-family: var(--font-head);
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.project-cta svg {
+  width: 15px; height: 15px;
+  transition: transform .25s var(--ease);
+}
+a.project:hover .project-cta svg { transform: translate(2px, -2px); }
+
 .projects-note {
   margin: 34px 0 0;
   text-align: center;
