@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fatima Boubker — Data Analytics & Intelligence Artificielle</title>
+  <meta name="description" content="Portfolio de Fatima Boubker, étudiante en Master d'Excellence en Analytique des Données et Intelligence Artificielle. Projets en Machine Learning, Computer Vision et Business Intelligence." />
+  <meta name="author" content="Fatima Boubker" />
+  <meta property="og:title" content="Fatima Boubker — Data Analytics & IA" />
+  <meta property="og:description" content="Étudiante en Master en Analytique des Données et Intelligence Artificielle — à la recherche d'un stage PFE dès février 2027." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var saved = localStorage.getItem("fb-theme");
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (prefersLight ? "light" : "dark"));
+      } catch (e) { /* garde le thème sombre */ }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=3" />
+</head>
+<body>
+  <div class="progress-bar" aria-hidden="true"><span id="progress"></span></div>
+
+  <div class="bg-decor" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header class="site-header" id="header">
+    <div class="container nav-wrap">
+      <a href="#accueil" class="brand" aria-label="Retour à l'accueil">
+        <span class="brand-mark">FB</span>
+        <span class="brand-text">Fatima<strong>Boubker</strong></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="#accueil" class="nav-link active">Accueil</a>
+        <a href="#apropos" class="nav-link">À propos</a>
+        <a href="#formation" class="nav-link">Formation</a>
+        <a href="#experience" class="nav-link">Expérience</a>
+        <a href="#competences" class="nav-link">Compétences</a>
+        <a href="#projets" class="nav-link">Projets</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Basculer le thème clair / sombre" title="Thème clair / sombre">
+          <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/>
+          </svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11Z"/>
+          </svg>
+        </button>
+        <a class="icon-btn" href="https://github.com/Emma-BK" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub de Fatima Boubker" title="GitHub — Emma-BK">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.8-4.58 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.05 10.05 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+        </a>
+        <a class="btn btn-sm btn-ghost hide-sm" href="assets/Boubker_Fatima_CV.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
+          CV
+        </a>
+        <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero section" id="accueil">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="pulse-dot"></span> Disponible pour un stage PFE — dès février 2027
+          </p>
+          <h1 class="reveal">
+            Bonjour, je suis <br />
+            <span class="gradient-text">Fatima Boubker</span>
+          </h1>
+          <p class="hero-role reveal">
+            <span class="mono">&gt;</span> <span id="typed">Data Analytics &amp; Intelligence Artificielle</span><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero-desc reveal">
+            Étudiante en 2<sup>e</sup> année de Master d'Excellence en Analytique des Données et
+            Intelligence Artificielle à Agadir. Je transforme les données en décisions :
+            <strong>Machine Learning</strong>, <strong>Computer Vision</strong> et
+            <strong>Business Intelligence</strong>.
+          </p>
+
+          <div class="hero-cta reveal">
+            <a href="#projets" class="btn btn-primary">
+              Voir mes projets
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+              Me contacter
+            </a>
+          </div>
+
+          <div class="hero-stats reveal">
+            <div class="stat">
+              <span class="stat-num" data-count="4">4</span>
+              <span class="stat-label">Projets réalisés</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="2">2</span>
+              <span class="stat-label">Stages en entreprise</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="5">5</span>
+              <span class="stat-label">Formations</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="avatar-card">
+            <div class="avatar-glow"></div>
+            <div class="avatar-photo">
+              <img src="assets/portrait.jpg" alt="Portrait de Fatima Boubker" width="1000" height="1200" />
+            </div>
+            <div class="avatar-meta">
+              <strong>Fatima Boubker</strong>
+              <span>Data Analyst &amp; AI Engineer</span>
+            </div>
+          </div>
+
+          <div class="float-chip chip-1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 15 3.5-4 3 2.5L20 7"/></svg>
+            <span>Machine Learning</span>
+          </div>
+          <div class="float-chip chip-2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+            <span>Computer Vision</span>
+          </div>
+          <div class="float-chip chip-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/><path d="M7 13v-3M11 13V8M15 13v-2"/></svg>
+            <span>Power BI</span>
+          </div>
+          <div class="float-chip chip-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg>
+            <span>Python</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#apropos" class="scroll-hint" aria-label="Défiler vers la section À propos">
+        <span class="mouse"><span class="wheel"></span></span>
+        <span>Défiler</span>
+      </a>
+    </section>
+
+    <!-- ============ À PROPOS ============ -->
+    <section class="section" id="apropos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">01 — Profil</span>
+          <h2>À propos de <span class="gradient-text">moi</span></h2>
+          <p>Une passion pour les données, une obsession pour les résultats.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Actuellement en <strong>2<sup>e</sup> année de Master d'Excellence en Analytique des
+              Données et Intelligence Artificielle</strong> à la Faculté des Sciences — Centre
+              d'Excellence d'Agadir, je recherche un <strong>stage de fin d'études de 4 mois minimum
+              à partir du 1<sup>er</sup> février 2027</strong>.
+            </p>
+            <p>
+              Mon parcours, du DUT en Génie Informatique à la Licence d'Excellence en Data &amp; IA,
+              m'a donné une double culture : la rigueur du <strong>développement logiciel</strong> et
+              la puissance de l'<strong>analyse de données</strong>. J'aime concevoir des solutions
+              complètes, de la collecte des données jusqu'à la visualisation qui éclaire la décision.
+            </p>
+            <p>
+              Motivée à relever de nouveaux défis, je souhaite contribuer à des projets liés à
+              l'<strong>Analyse des Données</strong> et à l'<strong>Intelligence Artificielle</strong>,
+              au sein d'une équipe où je pourrai apprendre vite et apporter de la valeur concrète.
+            </p>
+
+            <div class="about-facts">
+              <div class="fact">
+                <span class="fact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                </span>
+                <div><span class="fact-label">Localisation</span><strong>Agadir, Maroc</strong></div>
+              </div>
+              <div class="fact">
+                <span class="fact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+                </span>
+                <div><span class="fact-label">Email</span><strong>fatimaboubker8@gmail.com</strong></div>
+              </div>
+              <div class="fact">
+                <span class="fact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h3l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z"/></svg>
+                </span>
+                <div><span class="fact-label">Téléphone</span><strong><a href="tel:+212753026069">+212 753-026069</a></strong></div>
+              </div>
+              <div class="fact">
+                <span class="fact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+                </span>
+                <div><span class="fact-label">Disponibilité</span><strong>Stage PFE — fév. 2027</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-side">
+            <div class="card reveal">
+              <h3 class="card-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18Z"/></svg>
+                Langues
+              </h3>
+
+              <div class="lang">
+                <div class="lang-top"><span>Arabe</span><span class="lang-level">Maternelle</span></div>
+                <div class="bar"><i style="--w:100%"></i></div>
+              </div>
+              <div class="lang">
+                <div class="lang-top"><span>Français</span><span class="lang-level">Intermédiaire</span></div>
+                <div class="bar"><i style="--w:65%"></i></div>
+              </div>
+              <div class="lang">
+                <div class="lang-top"><span>Anglais</span><span class="lang-level">Intermédiaire</span></div>
+                <div class="bar"><i style="--w:65%"></i></div>
+              </div>
+            </div>
+
+            <div class="card card-accent reveal">
+              <h3 class="card-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.5 6 .9-4.3 4.2 1 6L12 16.8 6.7 19.6l1-6L3.4 9.4l6-.9L12 3Z"/></svg>
+                Ce que je recherche
+              </h3>
+              <p class="card-text">
+                Un <strong>stage PFE de 4 mois minimum</strong> à partir du
+                <strong>1<sup>er</sup> février 2027</strong>, en Data Science, Machine Learning,
+                BI ou développement data.
+              </p>
+              <a class="link-arrow" href="#contact">Discutons de votre projet
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMATION ============ -->
+    <section class="section section-alt" id="formation">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">02 — Parcours</span>
+          <h2>Ma <span class="gradient-text">formation</span></h2>
+          <p>Un cursus d'excellence, de l'informatique à l'intelligence artificielle.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="tl-item reveal">
+            <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 4 9 5-9 5-9-5 9-5Z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+            <div class="tl-card">
+              <span class="tl-date">2025 — 2027 · En cours</span>
+              <h3>Master d'Excellence en Analytique des Données et Intelligence Artificielle</h3>
+              <p class="tl-place">Faculté des Sciences — Centre d'Excellence, Agadir</p>
+              <p class="tl-desc">Data mining, machine learning avancé, deep learning, big data, vision par ordinateur et systèmes décisionnels.</p>
+              <span class="pill pill-soft">Diplôme prévu en juillet 2027</span>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v6h6"/></svg></div>
+            <div class="tl-card">
+              <span class="tl-date">2024 — 2025</span>
+              <h3>Licence d'Excellence en Analytique des Données et Intelligence Artificielle</h3>
+              <p class="tl-place">Faculté des Sciences — Centre d'Excellence, Agadir</p>
+              <p class="tl-desc">Fondamentaux de l'analyse de données, statistiques, programmation Python, bases de données et initiation au machine learning.</p>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m8.5 9-2 2 2 2M15.5 9l2 2-2 2"/></svg></div>
+            <div class="tl-card">
+              <span class="tl-date">2022 — 2024</span>
+              <h3>Diplôme Universitaire de Technologie en Génie Informatique</h3>
+              <p class="tl-place">École Supérieure de Technologie, Guelmim</p>
+              <p class="tl-desc">Développement web et logiciel, conception de bases de données, UML / MERISE et programmation orientée objet.</p>
+            </div>
+          </article>
+          <article class="tl-item reveal">
+            <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7 15h10"/></svg></div>
+            <div class="tl-card">
+              <span class="tl-date">2021 — 2022</span>
+              <h3>BACCALAURÉAT SCIENCE PHYSIQUES</h3>
+              <p class="tl-place">LIBRES INZGANE AIT MELLOUL</p>
+              <p class="tl-desc">Baccalauréat en sciences physiques — cycle secondaire.</p>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m9.5 8.5-2 2 2 2M14.5 8.5l2 2-2 2"/></svg></div>
+            <div class="tl-card">
+              <span class="tl-date">2020 — 2021</span>
+              <h3>SCIENCE MATHEMATIQUE ET INFORMATIQUE</h3>
+              <p class="tl-place">FACULTÉ DES SCIENCES - AGADIR</p>
+              <p class="tl-desc">Formation en mathématiques et informatique à la Faculté des Sciences d'Agadir.</p>
+            </div>
+          </article>
+
+          <article class="tl-item reveal">
+            <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 4 9 5-9 5-9-5 9-5Z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+            <div class="tl-card">
+              <span class="tl-date">2019 — 2020</span>
+              <h3>BACCALAURÉAT SCIENCE MATHEMATIQUE</h3>
+              <p class="tl-place">LYCÉE AL MAJD - AZROU</p>
+              <p class="tl-desc">Baccalauréat en sciences mathématiques — cycle secondaire.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPÉRIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">03 — Terrain</span>
+          <h2>Expériences <span class="gradient-text">professionnelles</span></h2>
+          <p>De la première immersion en entreprise au développement complet d'applications.</p>
+        </div>
+
+        <div class="exp-grid">
+          <article class="exp-card reveal">
+            <div class="exp-top">
+              <div class="exp-logo">P2</div>
+              <div>
+                <h3>Potentiel 2 Maroc</h3>
+                <p class="exp-place">Agadir, Maroc</p>
+              </div>
+              <span class="pill">Avril — Mai 2024</span>
+            </div>
+            <h4 class="exp-role">Stage de fin d'études</h4>
+            <p>
+              Conception et développement complet d'une application web avec <strong>Django</strong> :
+              frontend, backend, gestion de la base de données et implémentation des fonctionnalités.
+            </p>
+            <ul class="tag-list">
+              <li>Django</li><li>Python</li><li>HTML/CSS</li><li>Base de données</li><li>Backend</li>
+            </ul>
+          </article>
+
+          <article class="exp-card reveal">
+            <div class="exp-top">
+              <div class="exp-logo">VB</div>
+              <div>
+                <h3>VALA BLEU</h3>
+                <p class="exp-place">Agadir, Maroc</p>
+              </div>
+              <span class="pill">Août 2023</span>
+            </div>
+            <h4 class="exp-role">Stage d'initiation</h4>
+            <p>
+              Conception, création et personnalisation d'un <strong>site e-commerce</strong> sous
+              <strong>WordPress</strong>, de la structure des pages à l'intégration des produits.
+            </p>
+            <ul class="tag-list">
+              <li>WordPress</li><li>E-commerce</li><li>Web design</li><li>CMS</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPÉTENCES ============ -->
+    <section class="section section-alt" id="competences">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">04 — Boîte à outils</span>
+          <h2>Compétences <span class="gradient-text">techniques</span></h2>
+          <p>Du code à la décision : un stack complet autour de la donnée.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-ico ico-code">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4"/><path d="m16 8 4 4-4 4"/><path d="m13.5 5-3 14"/></svg>
+              </span>
+              <h3>Langages</h3>
+            </div>
+            <ul class="tag-list">
+              <li>Python</li><li>Java</li><li>C</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-ico ico-web">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18"/><circle cx="6.5" cy="6.5" r=".6" fill="currentColor"/><circle cx="9" cy="6.5" r=".6" fill="currentColor"/></svg>
+              </span>
+              <h3>Développement &amp; conception</h3>
+            </div>
+            <ul class="tag-list">
+              <li>POO</li><li>HTML5 / CSS3</li><li>JavaScript</li><li>Django</li><li>FastAPI</li><li>API REST</li><li>UML</li><li>MERISE</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-ico ico-db">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+              </span>
+              <h3>Bases de données</h3>
+            </div>
+            <ul class="tag-list">
+              <li>MySQL</li><li>Oracle</li><li>PostgreSQL</li><li>SQLite</li><li>SQL Server</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-ico ico-chart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15v-4M12.5 15V8M17 15v-6"/></svg>
+              </span>
+              <h3>Analyse &amp; visualisation</h3>
+            </div>
+            <ul class="tag-list">
+              <li>EDA</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>Plotly</li><li>Power BI</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal skill-card-wide">
+            <div class="skill-head">
+              <span class="skill-ico ico-ai">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><circle cx="5" cy="6" r="1.8"/><circle cx="19" cy="6" r="1.8"/><circle cx="5" cy="18" r="1.8"/><circle cx="19" cy="18" r="1.8"/><path d="M6.4 7.2 9.9 10.4M17.6 7.2 14.1 10.4M6.4 16.8 9.9 13.6M17.6 16.8 14.1 13.6"/></svg>
+              </span>
+              <h3>Machine Learning &amp; Deep Learning</h3>
+            </div>
+            <ul class="tag-list">
+              <li>Scikit-learn</li><li>Random Forest</li><li>XGBoost</li><li>K-Means</li><li>Apriori</li><li>CNN</li><li>TensorFlow</li><li>Transformers</li><li>Réseaux de neurones</li><li>NLP</li><li>Computer Vision</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-ico ico-big">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M4.2 7.5l3.4 2M16.4 14.5l3.4 2M4.2 16.5l3.4-2M16.4 9.5l3.4-2"/><circle cx="12" cy="12" r="3.4"/></svg>
+              </span>
+              <h3>Big Data &amp; outils</h3>
+            </div>
+            <ul class="tag-list">
+              <li>Hadoop</li><li>Spark</li><li>Talend</li><li>Docker</li><li>Web Scraping</li><li>Git</li><li>GitHub</li><li>VS Code</li><li>Jupyter</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-ico ico-model">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+              </span>
+              <h3>Modélisation &amp; bureautique</h3>
+            </div>
+            <ul class="tag-list">
+              <li>NetLogo</li><li>MATLAB</li><li>Excel</li><li>Word</li><li>PowerPoint</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETS ============ -->
+    <section class="section" id="projets">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">05 — Réalisations</span>
+          <h2>Projets <span class="gradient-text">sélectionnés</span></h2>
+          <p>Quatre projets où la donnée devient une solution concrète.</p>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filtrer les projets">
+          <button class="filter active" data-filter="all" type="button">Tous</button>
+          <button class="filter" data-filter="ml" type="button">Machine Learning</button>
+          <button class="filter" data-filter="vision" type="button">Computer Vision</button>
+          <button class="filter" data-filter="bi" type="button">Business Intelligence</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project reveal" data-cat="ml">
+            <div class="project-art art-1">
+              <span class="project-badge">Machine Learning</span>
+              <svg class="art-svg" viewBox="0 0 240 140" fill="none" aria-hidden="true">
+                <path d="M10 118 L45 92 L78 104 L112 66 L146 78 L180 44 L215 30" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 118 L45 92 L78 104 L112 66 L146 78 L180 44 L215 30 L215 130 L10 130 Z" fill="currentColor" opacity=".08"/>
+                <circle cx="45" cy="92" r="4" fill="currentColor"/><circle cx="112" cy="66" r="4" fill="currentColor"/><circle cx="180" cy="44" r="4" fill="currentColor"/>
+                <path d="M180 44 L196 22" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                <text x="196" y="18" font-size="12" fill="currentColor" font-family="monospace">7j</text>
+              </svg>
+              <div class="art-glow"></div>
+            </div>
+            <div class="project-body">
+              <h3>E-commerce Price Monitoring &amp; Prediction</h3>
+              <p>
+                Application web de suivi des prix e-commerce intégrant le <strong>web scraping</strong>
+                et un modèle prédictif <strong>XGBoost</strong> pour anticiper l'évolution des prix
+                sur 7 jours.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li><li>FastAPI</li><li>XGBoost</li><li>Pandas</li><li>SQLite</li><li>SQLAlchemy</li><li>aiohttp</li><li>asyncio</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="ml">
+            <div class="project-art art-2">
+              <span class="project-badge">Machine Learning</span>
+              <svg class="art-svg" viewBox="0 0 240 140" fill="none" aria-hidden="true">
+                <rect x="30" y="96" width="20" height="30" rx="4" fill="currentColor" opacity=".35"/>
+                <rect x="62" y="76" width="20" height="50" rx="4" fill="currentColor" opacity=".55"/>
+                <rect x="94" y="54" width="20" height="72" rx="4" fill="currentColor" opacity=".75"/>
+                <rect x="126" y="86" width="20" height="40" rx="4" fill="currentColor" opacity=".45"/>
+                <rect x="158" y="64" width="20" height="62" rx="4" fill="currentColor" opacity=".6"/>
+                <path d="M40 88 L72 66 L104 44 L136 76 L168 52" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5 5"/>
+                <circle cx="196" cy="40" r="14" stroke="currentColor" stroke-width="2.5"/>
+                <path d="m191 40 3.5 3.5L202 36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="art-glow"></div>
+            </div>
+            <div class="project-body">
+              <h3>FishCan — Contrôle Qualité Intelligent</h3>
+              <p>
+                Prétraitement de données industrielles et modèle <strong>Random Forest</strong> pour
+                la détection d'anomalies, avec système d'alertes et tableau de bord
+                <strong>Power BI</strong> de suivi des indicateurs qualité.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li><li>Pandas</li><li>Scikit-learn</li><li>Random Forest</li><li>Power BI</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="vision">
+            <div class="project-art art-3">
+              <span class="project-badge">Computer Vision</span>
+              <svg class="art-svg" viewBox="0 0 240 140" fill="none" aria-hidden="true">
+                <path d="M24 46V28h20M216 46V28h-20M24 94v18h20M216 94v18h-20" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="120" cy="70" r="26" stroke="currentColor" stroke-width="2.5"/>
+                <circle cx="111" cy="64" r="3" fill="currentColor"/><circle cx="129" cy="64" r="3" fill="currentColor"/>
+                <path d="M110 80c5 4 15 4 20 0" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <rect x="84" y="36" width="72" height="68" rx="8" stroke="currentColor" stroke-width="2" stroke-dasharray="6 5" opacity=".7"/>
+              </svg>
+              <div class="art-glow"></div>
+            </div>
+            <div class="project-body">
+              <h3>Reconnaissance Faciale en Temps Réel</h3>
+              <p>
+                Détection de personnes en temps réel via caméra, recherche de personnes dans des
+                images et vidéos, comptage et <strong>alertes vocales</strong>.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li><li>OpenCV</li><li>Face Recognition</li><li>YOLOv8</li><li>NumPy</li><li>pyttsx3</li><li>Threading</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="bi">
+            <div class="project-art art-4">
+              <span class="project-badge">Business Intelligence</span>
+              <svg class="art-svg" viewBox="0 0 240 140" fill="none" aria-hidden="true">
+                <rect x="112" y="56" width="30" height="30" rx="4" stroke="currentColor" stroke-width="2.5"/>
+                <rect x="26" y="26" width="34" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+                <rect x="26" y="88" width="34" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+                <rect x="180" y="26" width="34" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+                <rect x="180" y="88" width="34" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M60 38h20v28M60 100h20V78M142 71h18v-33M142 71h18v33" stroke="currentColor" stroke-width="2"/>
+                <path d="M127 56V30h33M127 86v26h33" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" opacity=".6"/>
+              </svg>
+              <div class="art-glow"></div>
+            </div>
+            <div class="project-body">
+              <h3>Analyse Décisionnelle &amp; Data Warehouse</h3>
+              <p>
+                Conception d'un <strong>Data Warehouse en schéma étoile</strong>, automatisation des
+                flux <strong>ETL</strong>, création de tableaux de bord interactifs et analyse des
+                données pour l'aide à la décision.
+              </p>
+              <ul class="tag-list">
+                <li>SQL Server</li><li>Talend</li><li>Power BI</li><li>Weka</li><li>K-Means</li><li>Apriori</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-note reveal">
+          D'autres expérimentations sont disponibles sur demande — chaque projet est documenté
+          (données, méthode, résultats).
+        </p>
+
+        <div class="github-strip reveal">
+          <span class="github-ico">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.8-4.58 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.05 10.05 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+          </span>
+          <div class="github-copy">
+            <strong>Mon code sur GitHub</strong>
+            <span>@Emma-BK · 5 dépôts publics — WordPress, PHP et projets académiques</span>
+          </div>
+          <a class="btn btn-outline btn-sm" href="https://github.com/Emma-BK" target="_blank" rel="noopener noreferrer">
+            Voir le profil
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg>
+          </a>
+          <div class="github-repos">
+            <a href="https://github.com/Emma-BK/SiteWordpress" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7a3 3 0 0 1 3-3h4l2 2h4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Z"/></svg>
+              SiteWordpress <span>PHP</span>
+            </a>
+            <a href="https://github.com/Emma-BK/MiniProjetCMS" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7a3 3 0 0 1 3-3h4l2 2h4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Z"/></svg>
+              MiniProjetCMS
+            </a>
+            <a href="https://github.com/Emma-BK/WORDPRESSproject" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7a3 3 0 0 1 3-3h4l2 2h4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Z"/></svg>
+              WORDPRESSproject
+            </a>
+            <a href="https://github.com/Emma-BK/site" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7a3 3 0 0 1 3-3h4l2 2h4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Z"/></svg>
+              site
+            </a>
+            <a href="https://github.com/Emma-BK/Prj_Entrepreunariat" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7a3 3 0 0 1 3-3h4l2 2h4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7Z"/></svg>
+              Prj_Entrepreunariat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-copy">
+            <span class="section-tag">06 — Contact</span>
+            <h2>Travaillons <span class="gradient-text">ensemble</span></h2>
+            <p>
+              Vous recherchez une stagiaire motivée en Data Analytics &amp; IA pour un
+              <strong>stage PFE dès février 2027</strong> ? Parlons de vos projets.
+            </p>
+
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:fatimaboubker8@gmail.com?subject=Stage%20PFE%20%E2%80%94%20Fatima%20Boubker">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+                Envoyer un email
+              </a>
+              <button class="btn btn-outline" id="copyMail" type="button" data-mail="fatimaboubker8@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M15 5.5A2.5 2.5 0 0 0 12.5 3H6a2.5 2.5 0 0 0-2.5 2.5V13"/></svg>
+                <span id="copyLabel">Copier l'email</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-side">
+            <a class="contact-line" href="tel:+212753026069">
+              <span class="contact-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h3l1.6 4-2 1.4a12 12 0 0 0 5.5 5.5l1.4-2 4 1.6v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z"/></svg>
+              </span>
+              <span><small>Téléphone</small>+212 753-026069</span>
+            </a>
+            <a class="contact-line" href="mailto:fatimaboubker8@gmail.com">
+              <span class="contact-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+              </span>
+              <span><small>Email</small>fatimaboubker8@gmail.com</span>
+            </a>
+            <div class="contact-line">
+              <span class="contact-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              </span>
+              <span><small>Localisation</small>Agadir, Maroc</span>
+            </div>
+            <a class="contact-line" href="https://github.com/Emma-BK" target="_blank" rel="noopener noreferrer">
+              <span class="contact-ico">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.8-4.58 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.05 10.05 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+              </span>
+              <span><small>GitHub</small>github.com/Emma-BK</span>
+            </a>
+            <a class="contact-line" href="assets/Boubker_Fatima_CV.pdf" download>
+              <span class="contact-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
+              </span>
+              <span><small>Document</small>Télécharger le CV (PDF)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#accueil" class="brand small">
+        <span class="brand-mark">FB</span>
+        <span class="brand-text">Fatima<strong>Boubker</strong></span>
+      </a>
+      <p>© <span id="year">2026</span> Fatima Boubker — Data Analytics &amp; Intelligence Artificielle · <a href="https://github.com/Emma-BK" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+      <a href="#accueil" class="back-top" aria-label="Retour en haut">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m6 11 6-6 6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/script.js?v=3"></script>
+</body>
+</html>
